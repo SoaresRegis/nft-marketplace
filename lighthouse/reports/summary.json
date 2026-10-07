@@ -1,0 +1,239 @@
+{
+  "generatedAt": "2026-10-07T15:04:10.039Z",
+  "baseUrl": "http://localhost:4173",
+  "runsPerPage": 3,
+  "targets": {
+    "performance": 90,
+    "accessibility": 95,
+    "best-practices": 95,
+    "seo": 90
+  },
+  "environment": {
+    "lighthouse": "13.5.0",
+    "chrome": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/141.0.0.0 Safari/537.36",
+    "node": "v22.22.0",
+    "os": "Linux 6.18.44-fc-v77 (x64)",
+    "cpus": "4x Intel(R) Xeon(R) Processor @ 2.10GHz",
+    "memoryGb": 17,
+    "build": "vite build --mode demo (mocks ativos), servido por vite preview",
+    "deps": {
+      "vite": "^7.3.7",
+      "react": "^19.3.0",
+      "msw": "2.15.0"
+    }
+  },
+  "results": [
+    {
+      "page": "inicio",
+      "path": "/",
+      "profile": "mobile",
+      "median": {
+        "performance": 83,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 3685,
+      "cls": 0,
+      "tbtMs": 217,
+      "fcpMs": 2490,
+      "runs": [
+        {
+          "scores": {
+            "performance": 84,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 3685.078875,
+          "cls": 0,
+          "tbt": 164.49999999999977,
+          "fcp": 2510.4590000000003
+        },
+        {
+          "scores": {
+            "performance": 83,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 3657.027475,
+          "cls": 0,
+          "tbt": 217,
+          "fcp": 2456.8022
+        },
+        {
+          "scores": {
+            "performance": 82,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 3696.0895250000003,
+          "cls": 0,
+          "tbt": 216.50000000000023,
+          "fcp": 2489.8017999999997
+        }
+      ]
+    },
+    {
+      "page": "detalhe",
+      "path": "/nft/nft-01",
+      "profile": "mobile",
+      "median": {
+        "performance": 85,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 3470,
+      "cls": 0,
+      "tbtMs": 208,
+      "fcpMs": 2246,
+      "runs": [
+        {
+          "scores": {
+            "performance": 88,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 3401.72025,
+          "cls": 0,
+          "tbt": 150,
+          "fcp": 2215.1541749999997
+        },
+        {
+          "scores": {
+            "performance": 84,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 3546.9067499999996,
+          "cls": 0,
+          "tbt": 234.5,
+          "fcp": 2280.134725
+        },
+        {
+          "scores": {
+            "performance": 85,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 3470.1495,
+          "cls": 0,
+          "tbt": 207.5,
+          "fcp": 2246.2046499999997
+        }
+      ]
+    },
+    {
+      "page": "inicio",
+      "path": "/",
+      "profile": "desktop",
+      "median": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 810,
+      "cls": 0,
+      "tbtMs": 7,
+      "fcpMs": 582,
+      "runs": [
+        {
+          "scores": {
+            "performance": 99,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 837.2775,
+          "cls": 0.00016458031333651488,
+          "tbt": 9.5,
+          "fcp": 597.422
+        },
+        {
+          "scores": {
+            "performance": 99,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 804.17375,
+          "cls": 0,
+          "tbt": 6.5,
+          "fcp": 581.639
+        },
+        {
+          "scores": {
+            "performance": 99,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 810.36425,
+          "cls": 0.00016458031333651488,
+          "tbt": 2.5,
+          "fcp": 553.3914
+        }
+      ]
+    },
+    {
+      "page": "detalhe",
+      "path": "/nft/nft-01",
+      "profile": "desktop",
+      "median": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 777,
+      "cls": 0,
+      "tbtMs": 0,
+      "fcpMs": 529,
+      "runs": [
+        {
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 776.67975,
+          "cls": 0,
+          "tbt": 0,
+          "fcp": 511.78649999999993
+        },
+        {
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 765.832,
+          "cls": 0,
+          "tbt": 0,
+          "fcp": 529.1655000000001
+        },
+        {
+          "scores": {
+            "performance": 99,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 778.92225,
+          "cls": 0,
+          "tbt": 0,
+          "fcp": 570.6378
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.5rem;
+  --background: #140d0a;
+  --foreground: #f5f1eb;
+  --card: #241612;
+  --card-foreground: #f5f1eb;
+  --popover: #241612;
+  --popover-foreground: #f5f1eb;
+  --primary: #d28a4c;
+  --primary-hover: #e89b55;
+  --primary-foreground: #140d0a;
+  --highlight: #e89b55;
+  --secondary: #241612;
+  --secondary-foreground: #f5f1eb;
+  --muted: #241612;
+  --muted-foreground: #cfb28c;
+  --caption: #cfb28c;
+  --strike: #b39463;
+  --accent: #33221b;
+  --accent-foreground: #f5f1eb;
+  --band: #38220f;
+  --destructive: #ff8a7a;
+  --destructive-foreground: #140d0a;
+  --success: #8fd19e;
+  --warning: #f2c14e;
+  --border: #4a3426;
+  --line: #8a5c33;
+  --input: #140d0a;
+  --input-foreground: #f5f1eb;
+  --ring: #f0b27a;
+  /* Mobile (Figma 414): botões redondos, bordas e campos. */
+  --surface-2: #2f1d15;
+  --line-soft: #3f2319;
+  --field: #55321f;
+}
+
+@theme inline {
+  --font-sans: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-mono: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-highlight: var(--highlight);
+  --color-strike: var(--strike);
+  --color-band: var(--band);
+  --color-line: var(--line);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-caption: var(--caption);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-foreground: var(--input-foreground);
+  --color-ring: var(--ring);
+  --color-surface-2: var(--surface-2);
+  --color-line-soft: var(--line-soft);
+  --color-field: var(--field);
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: var(--radius);
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --breakpoint-xs: 26rem;
+  --animate-shimmer: shimmer 1.6s linear infinite;
+
+  @keyframes shimmer {
+    from {
+      background-position: 200% 0;
+    }
+    to {
+      background-position: -200% 0;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    color-scheme: dark;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    min-height: 100dvh;
+  }
+  :focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 2px;
+  }
+  img {
+    max-width: 100%;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  .skeleton {
+    background-color: #241612;
+    background-image: linear-gradient(90deg, #241612 0%, #33221b 40%, #3d2a21 50%, #33221b 60%, #241612 100%);
+    background-size: 200% 100%;
+    animation: var(--animate-shimmer);
+  }
+  /* Frame de 1440 com padding horizontal de 120px (conteúdo de 1200px). */
+  .container-page {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+  @media (min-width: 48rem) {
+    .container-page {
+      padding-inline: 2.5rem;
+    }
+  }
+  @media (min-width: 80rem) {
+    .container-page {
+      padding-inline: 7.5rem;
+    }
+  }
+  .bg-hero-gradient {
+    background-image: linear-gradient(128deg, #d28a4c 0%, #38220f 100%);
+  }
+  /* Botão principal do mobile (Figma): laranja com leve degradê. */
+  .bg-pill-gradient {
+    background-image: linear-gradient(105deg, #d28a4c 0%, rgb(210 138 76 / 0.8) 100%);
+  }
+  .bg-pill-gradient-soft {
+    background-image: linear-gradient(105deg, rgb(210 138 76 / 0.54) 0%, #d28a4c 100%);
+  }
+  .bg-mobile-hero {
+    background-image: linear-gradient(117deg, rgb(210 138 76 / 0.2) 0%, rgb(210 138 76 / 0.1) 100%);
+  }
+  .bg-card-gradient {
+    background-image: linear-gradient(130deg, #241612 0%, #2f1d15 100%);
+  }
+  /* Espaço para barras fixas no rodapé do mobile (definido por cada barra). */
+  .pb-bottom-bar {
+    padding-bottom: var(--bottom-bar, 0px);
+  }
+  .bottom-above-bar {
+    bottom: calc(var(--bottom-bar, 0px) + 1rem);
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .skeleton {
+    animation: none;
+    background-image: none;
+  }
+}
