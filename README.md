@@ -6,6 +6,9 @@ Não há backend real nem serviço privado. A API REST e o servidor Socket.IO s�
 
 Arquitetura, contratos, sessão, carrinho, cache, reconciliação REST × Socket.IO, decisões de UX e desvios do Figma: **[ARCHITECTURE.md](ARCHITECTURE.md)**.
 
+# Projeto no ar
+https://nft-marketplace-nine-tau.vercel.app/
+
 ## Setup
 
 Requisitos: **Node 20+** e **pnpm 9+** (`corepack enable` instala o pnpm da versão certa).
